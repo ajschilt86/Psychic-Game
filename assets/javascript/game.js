@@ -11,7 +11,8 @@ console.log(compChoice);
 
 document.addEventListener("keydown", function (event) {
     var userGuess = event.key;
-
+    userArray.push(userGuess);
+    console.log(event)
 
     if (userGuess === compChoice) {
         wins++;
@@ -20,16 +21,15 @@ document.addEventListener("keydown", function (event) {
     else {
         guesses--;
     }
-
-    if (guesses === 0) {
-        losses++, 
-        guesses = 10;
     
+    if (guesses === 0) {
+        losses++ , guesses = 9;       
+        userArray = [];
     }
 
-    userArray.push(userGuess);
+    
 
-    console.log(event)
+    
 
     document.getElementById("wins").innerHTML = "Wins: " + wins;
     document.getElementById("losses").innerHTML = "losses: " + losses;
@@ -39,11 +39,11 @@ document.addEventListener("keydown", function (event) {
 
 })
 
-// for (i = 0; i < 11; i++) { //
-
-
-
 document.getElementById("wins").innerHTML = "Wins: " + wins;
 document.getElementById("losses").innerHTML = "losses: " + losses;
 document.getElementById("guesses").innerHTML = "Guesses left: " + guesses;
 document.getElementById("lettersGuessed").innerHTML = userArray;
+
+// for (i = 0; i < 11; i++) { //
+
+
