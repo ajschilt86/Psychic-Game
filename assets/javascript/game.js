@@ -16,7 +16,8 @@ document.addEventListener("keydown", function (event) {
 
     if (userGuess === compChoice) {
         wins++;
-        userArray.push("WINNER!!!");
+        userArray.length = 0;
+        guesses = 10;
         compChoice = letters[Math.floor(Math.random() * letters.length)]
         console.log(compChoice);
         
@@ -30,6 +31,7 @@ document.addEventListener("keydown", function (event) {
         guesses = 10;       
         userArray = [];
         compChoice = letters[Math.floor(Math.random() * letters.length)]
+        console.log(compChoice);
     }    
 
     document.getElementById("wins").innerHTML = "Wins: " + wins;
