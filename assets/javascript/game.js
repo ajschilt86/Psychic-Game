@@ -16,20 +16,21 @@ document.addEventListener("keydown", function (event) {
 
     if (userGuess === compChoice) {
         wins++;
-
+        userArray.push("WINNER!!!");
+        compChoice = letters[Math.floor(Math.random() * letters.length)]
+        console.log(compChoice);
+        
     }
     else {
         guesses--;
     }
     
     if (guesses === 0) {
-        losses++ , guesses = 9;       
+        losses++; 
+        guesses = 10;       
         userArray = [];
-    }
-
-    
-
-    
+        compChoice = letters[Math.floor(Math.random() * letters.length)]
+    }    
 
     document.getElementById("wins").innerHTML = "Wins: " + wins;
     document.getElementById("losses").innerHTML = "losses: " + losses;
