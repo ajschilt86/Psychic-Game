@@ -38,11 +38,12 @@ document.addEventListener("keydown", function (event) {
     document.getElementById("losses").innerHTML = "losses: " + losses;
     document.getElementById("guesses").innerHTML = "Guesses left: " + guesses;
     document.getElementById("lettersGuessed").innerHTML = userArray;
-
-
 })
 
-
+document.getElementById("wins").innerHTML = "Wins: " + wins;
+document.getElementById("losses").innerHTML = "losses: " + losses;
+document.getElementById("guesses").innerHTML = "Guesses left: " + guesses;
+document.getElementById("lettersGuessed").innerHTML = userArray;
 
 // for (i = 0; i < 11; i++) { //
 
